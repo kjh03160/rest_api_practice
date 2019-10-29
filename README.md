@@ -14,6 +14,6 @@
 - 가상환경에 프로젝트에 필요한 라이브러리들 설치
 
   ```shell
-  pip install -r require
+  pip install -r requirements.txt
   ```
 
