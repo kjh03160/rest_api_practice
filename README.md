@@ -4,27 +4,16 @@
 
 #### https://github.com/lucrae/django-cheat-sheet
 
-- 가상환경 만들기
+- 가상환경 실행
 
-  ```shell
-  virtualenv 가상환경이름
-  ```
-
+    ```shell
+    source venv/bin/activate
+    ```
   
 
-- 가상환경에 장고 설치
+- 가상환경에 프로젝트에 필요한 라이브러리들 설치
 
   ```shell
-  pip install Django
+  pip install -r require
   ```
-
-
-
-- 앱 만들기
-
-  ```shell
-  python manage.py startapp 앱이름
-  ```
-
-  
 
