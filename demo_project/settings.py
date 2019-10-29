@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'REST',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'                         # 미디어 파일에 해당하는 url prefix
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 미디어 파일들 들어갈 폴더 위치 (media 폴더)

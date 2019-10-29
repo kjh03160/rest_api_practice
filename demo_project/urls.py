@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+import REST.views
+import REST.urls
+from rest_framework import urls
+from django.conf import settings # 미디어 파일 관련 설정 import
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('REST.urls')),
+    path('api-auth/', include('rest_framework.urls'))   # 로그인 / 로그아웃 가능
 ]
+
+# 미디어 파일 url, 폴더 위치 설정
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
